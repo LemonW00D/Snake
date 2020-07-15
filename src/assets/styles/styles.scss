@@ -1,0 +1,122 @@
+@import "variables";
+@import "general";
+@import "classes";
+@import "responsive";
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid:
+    "header" auto
+    "content" 1fr
+    "footer" auto /
+    auto;
+}
+
+header {
+  grid-area: header;
+  background: #6CA300;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border-card);
+  box-shadow: var(--shadow-card-blue);
+
+  .instruction {
+    width : 40rem;
+    margin-left: 1rem;
+    align-self: start;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      li{
+        margin: 0.5rem;
+        
+          @include xl {
+            font-size: 1.2rem;
+          }
+      }
+
+      i {
+        transform: rotate(45deg);
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  .snake-img{
+    max-height: 185px;
+
+    @include xl {
+      max-height: 130px;
+    }
+  }
+
+  .commandes {
+    width : 40rem;
+    align-self: start;
+    margin-right: 1rem;
+    text-align: center;
+
+    p{
+      @include xl {
+        font-size: 1.2rem;
+      }
+    }
+
+    img{
+      max-height: 100px;
+
+      @include xl {
+        max-height: 50px;
+      }
+    }
+  }
+}
+
+.content {
+  grid-area: content;
+  background-image: url("./../images/nintendo.png"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .center-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    canvas {
+      height: 400px;
+      width: 800px;
+      border: 3px solid white;
+    }
+  }
+}
+
+
+footer {
+  grid-area: footer;
+  padding: 1rem 0;
+  background: var(--dark-grey);
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img{
+    width: 35px;
+    margin: 0rem 1.25rem;
+  }
+}

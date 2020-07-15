@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="copyright" content="http://arnaud-tessier.fr">
+    <meta name="geo.placename" content="Bordeaux, Gironde">
+    <meta name="geo.region" content="FR">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Jeu Snake">
+    <meta name="keywords" content="Jeu, Game, Snake">
+    <meta name="author" content="Arnaud TESSIER">
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap"
+      rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/4ad0d4ad54.js" crossorigin="anonymous"></script>
+
+    <!-- Titre -->
+    <title>Snake</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="instruction">
+          <h2>Instructions</h2>
+          <ul>
+            <li><i class="fas fa-rocket"></i>Tu dois faire manger à ton serpent le plus de nourriture (carrés rouges), allongeant à chaque fois la taille du serpent.</li>
+            <li><i class="fas fa-rocket"></i>Tu dois éviter que la tête du serpent ne touche les murs ou son propre corps, auquel cas il meurt.</li>
+          </ul>
+        </div>
+        <img src="./assets/images/snake-game.png" alt="snake-game" class="snake-img">
+        <div class="commandes">
+          <h2>Commandes</h2>
+          <p>Utilise les flèches directionnelles de ton clavier</p>
+          <img src="./assets/images/arrow-keys.png" alt="flèches du clavier">
+        </div>
+      </header>
+      <div class="content">
+        <div class="center-game">
+          <canvas></canvas>
+        </div>
+      </div>
+      <footer>
+        <img src="./assets/images/favicon-white.svg" alt="Arnaud TESSIER">
+        <p>© Arnaud TESSIER - Snake, a desktop web-browser JavaScript game</p>
+        <img src="./assets/images/javascript.png" alt="JavaScript" title="JavaScript">
+      </footer>
+    </div>
+  <script src="main.bundle.js"></script></body>
+</html>
